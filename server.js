@@ -4,6 +4,9 @@ var express = require('express');
 var app = express();
 app.use(cors()) // <- Allows other apps to use my API server
 
+// Our messages that get stored and sent and received
+var messages = ['thomas', 'mila']
+
 app.get('/', function(req, res){
   res.send('hello world');
 });
