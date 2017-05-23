@@ -1,10 +1,8 @@
-console.log('thisMaServer')
-
-var messages = ['thomas', 'mila']
-console.log(messages)
-
+var cors = require('cors')
 var express = require('express');
+
 var app = express();
+app.use(cors()) // <- Allows other apps to use my API server
 
 app.get('/', function(req, res){
   res.send('hello world');
